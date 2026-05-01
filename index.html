@@ -13,7 +13,7 @@
           135deg,
           #ff9a9e 0%,
           #fecfef 50%,
-          #f7bb97 100%
+          #f7bb97 100% fb
         );
         background-attachment: fixed;
         color: white;
@@ -169,58 +169,62 @@ Te amo muchísimo.
       // He incluido 🦖 y 🦕 en la mezcla
       const tiposElementos = ["❤️", "💖", "✨", "🌸", "💕", "🦖", "🦕", "🐊"];
     </script>
-  
-      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-<style>
-  /* Cursor de dinosaurio para toda la página */
-  body {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size: 24px;"><text y="20">🦖</text></svg>'), auto;
-  }
-  
-  /* Estilo para el botón de "Más razones" */
-  .btn-sorpresa {
-    background: #ffcc33;
-    color: #5d4037;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-weight: bold;
-    display: none; /* Se mostrará después de abrir el regalo */
-  }
-</style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-<script>
-  function abrirRegalo() {
-    document.getElementById("regalo").style.display = "block";
-    document.getElementById("btnMas").style.display = "inline-block";
-    
-    // 🎊 ¡LANZAR CONFETI!
-    confetti({
-      particleCount: 150,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#ff9a9e', '#f7bb97', '#ff0000', '#ffffff']
-    });
+    <style>
+      /* Cursor de dinosaurio para toda la página */
+      body {
+        cursor:
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size: 24px;"><text y="20">🦖</text></svg>'),
+          auto;
+      }
 
-    escribirCarta();
-  }
+      /* Estilo para el botón de "Más razones" */
+      .btn-sorpresa {
+        background: #ffcc33;
+        color: #5d4037;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 15px;
+        font-weight: bold;
+        display: none; /* Se mostrará después de abrir el regalo */
+      }
+    </style>
 
-  // Función para las razones extra
-  function mostrarRazon() {
-    const razones = [
-      "Eres mi persona favorita en el mundo 🌎",
-      "Me encantan tus abrazos de dinosaurio 🦖",
-      "Gracias por ser mi lugar seguro 🏠",
-      "Eres más dulce que cualquier pastel 🎂",
-      "¡Te elegiría mil veces más! ❤️"
-    ];
-    const frase = razones[Math.floor(Math.random() * razones.length)];
-    alert(frase);
-  }
-</script>
+    <script>
+      function abrirRegalo() {
+        document.getElementById("regalo").style.display = "block";
+        document.getElementById("btnMas").style.display = "inline-block";
 
-<button id="btnMas" class="btn-sorpresa" onclick="mostrarRazon()">Haz clic para una razón extra ✨</button>
+        // 🎊 ¡LANZAR CONFETI!
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ["#ff9a9e", "#f7bb97", "#ff0000", "#ffffff"],
+        });
+
+        escribirCarta();
+      }
+
+      // Función para las razones extra
+      function mostrarRazon() {
+        const razones = [
+          "Eres mi persona favorita en el mundo 🌎",
+          "Me encantan tus abrazos de dinosaurio 🦖",
+          "Gracias por ser mi lugar seguro 🏠",
+          "Eres más dulce que cualquier pastel 🎂",
+          "¡Te elegiría mil veces más! ❤️",
+        ];
+        const frase = razones[Math.floor(Math.random() * razones.length)];
+        alert(frase);
+      }
+    </script>
+
+    <button id="btnMas" class="btn-sorpresa" onclick="mostrarRazon()">
+      Haz clic para una razón extra ✨
+    </button>
     <script>
       setInterval(() => {
         const element = document.createElement("div");
